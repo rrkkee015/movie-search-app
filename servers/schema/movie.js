@@ -4,9 +4,9 @@ var Schema = mongoose.Schema;
 var MovieSchema = new Schema({
     title: String,
     thumnail: String,
-    actor: Array,
-    director: Array,
-    genre: Array,
+    actors: Array,
+    directors: Array,
+    genres: Array,
     synopsis: String,
     rating: Number,
     url: String
