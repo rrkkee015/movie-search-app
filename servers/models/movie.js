@@ -9,7 +9,8 @@ var MovieSchema = new Schema({
     genres: Array,
     synopsis: String,
     rating: Number,
-    url: String
+    url: String,
+    ott: Number
 })
 
 module.exports = mongoose.model('Movie', MovieSchema);
