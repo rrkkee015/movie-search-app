@@ -1,5 +1,4 @@
 import pymongo
-import json
 import ast
 
 class MovieDB:
@@ -12,35 +11,25 @@ class MovieDB:
         self.movies = ast.literal_eval(open(loc, 'r', encoding=encoding).read())
         self.keywords = []
 
-    def set_keywords(self, ott):
-        if ott == 'wavve':
-            self.keywords = ["title", "img", "actors", "directors", "genre", "synopsis", "rating", "url", "1"]
-            for movie in self.movies:
-                for keyword in self.keywords[2:5]:
-                    movie[keyword] = list(map(lambda x: x["text"], movie[keyword]["list"]))
-        elif ott == 'watcha':
-            self.keywords = ["title", "img_url", "actors", "directors", "genre", "synopsis", "rating", "url", "2"]
-
     def insert_to_db_with_parse(self, ott):
         for movie in self.movies:
             movieDocument = {
-                "title": movie[self.keywords[0]],
-                "thumnail": movie[self.keywords[1]],
-                "actors": movie[self.keywords[2]],
-                "directors": movie[self.keywords[3]],
-                "genres": movie[self.keywords[4]],
-                "synopsis": movie[self.keywords[5]],
-                "rating": movie[self.keywords[6]],
-                "url": movie[self.keywords[7]],
-                "OTT": self.keywords[8]
+                "title": movie["title"],
+                "thumbnail": movie["thumbnail"],
+                "actors": movie["actors"],
+                "directors": movie["directors"],
+                "genres": movie["genres"],
+                "synopsis": movie["synopsis"],
+                "rating": movie["rating"],
+                "url": movie["url"],
+                "OTT": ott
             }
+            print("진행 중... {} {}".format(movieDocument["title"], ott))
             MovieDB.movies_cols.insert_one(movieDocument)
 
 
 wavve = MovieDB('./Wavve.txt', 'utf-8-sig')
-wavve.set_keywords('wavve')
-wavve.insert_to_db_with_parse('wavve')
+wavve.insert_to_db_with_parse(1)
 
 watcha = MovieDB('./Watcha.txt', 'utf-8-sig')
-watcha.set_keywords('watcha')
-watcha.insert_to_db_with_parse('watcha')
+watcha.insert_to_db_with_parse(2)
