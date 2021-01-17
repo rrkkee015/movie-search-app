@@ -1,0 +1,21 @@
+.Navbar {
+    z-index: 2;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    width: 100%;
+    top: 0;
+}
+
+.Navbar__black {
+    background-color: #344770;
+    color: #C3CBD1;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    
+}
