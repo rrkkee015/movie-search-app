@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import './App.css';
 
 class App extends React.Component {
@@ -20,7 +20,7 @@ class App extends React.Component {
     const {username} = this.state;
     return (
       <div className="App">
-        <Header></Header>
+        <Navbar></Navbar>
         <header className="App-header">
           {username ? `Hello ${username}` : 'Hello World'}
         </header>

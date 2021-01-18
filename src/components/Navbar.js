@@ -1,7 +1,8 @@
 import React from 'react';
-import '../css/Header.css'
+import '../css/Navbar.css'
+import { IoLogInOutline } from "react-icons/io5"
 
-class Header extends React.Component {
+class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,18 +29,22 @@ class Header extends React.Component {
     render() {
         return (
             <div className={`Navbar ${this.state.scrollTop && 'Navbar__black'}`}>
-                <div className="Navbar__content Hamburger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div className="Navbar_title">Navbar</div>
                 <div className="Navbar__content">
-                    Login
+                    <div className="Navbar__button Hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div className="Navbar_title">Moovie</div>
+                <div className="Navbar__content">
+                    <div className="Navbar__button">
+                        <IoLogInOutline size="20"/>
+                    </div>
                 </div>
             </div>
         )
     }
 }
 
-export default Header;
+export default Navbar;
