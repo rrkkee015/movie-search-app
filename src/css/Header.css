@@ -2,9 +2,8 @@
     z-index: 2;
     min-height: 40px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     color: white;
     position: sticky;
     position: -webkit-sticky;
@@ -12,10 +11,36 @@
     top: 0;
 }
 
+.Navbar
+.Hamburger > div {
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    margin: 6px 0;
+}
+
 .Navbar__black {
-    background-color: #344770;
+    background-color: #344770 !important;
     color: #C3CBD1;
     -webkit-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
-    
+    transition: all 500ms ease-in-out;   
+}
+
+.Navbar__black
+.Hamburger > div {
+    background-color: #C3CBD1 !important;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;   
+}
+
+.Navbar_title {
+    font-size: 20px;
+}
+
+.Navbar__content {
+    padding: 1rem;
+}
+
+.Hamburger {
+    cursor: pointer;
 }

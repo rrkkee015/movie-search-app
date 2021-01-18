@@ -28,7 +28,15 @@ class Header extends React.Component {
     render() {
         return (
             <div className={`Navbar ${this.state.scrollTop && 'Navbar__black'}`}>
-                <div>Navbar</div>
+                <div className="Navbar__content Hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div className="Navbar_title">Navbar</div>
+                <div className="Navbar__content">
+                    Login
+                </div>
             </div>
         )
     }
