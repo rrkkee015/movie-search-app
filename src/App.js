@@ -1,29 +1,14 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Body from './components/Body';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: null
-    };
-  }
-
-  componentDidMount() {
-    fetch('api/group')
-      .then(res=>res.json())
-      .then(data=>this.setState({username: data.username}));
-  }
-
   render() {
-    const {username} = this.state;
     return (
       <div className="App">
         <Navbar></Navbar>
-        <header className="App-header">
-          {username ? `Hello ${username}` : 'Hello World'}
-        </header>
+        <Body></Body>
       </div>
     )
   }
