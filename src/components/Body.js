@@ -18,9 +18,11 @@ class Body extends React.Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		this.setState({
-			inputValue: '',
-		})
+		fetch(`/api/search/${this.state.inputValue}`)
+			.then(res=>res.json())
+			.then(data=> {
+				console.log(data);
+			})
 	}
 
 	render() {
@@ -28,6 +30,7 @@ class Body extends React.Component {
 			<div className="Body">
 				<form onSubmit={this.handleSubmit}>
 					<input
+						type="text"
 						placeholder="What do you want?"
 						value={this.state.inputValue}
 						onChange={this.handleChange}
