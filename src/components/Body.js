@@ -17,11 +17,13 @@ class Body extends React.Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault();
-		fetch(`/api/search/${this.state.inputValue}`)
-			.then(res=>res.json())
-			.then(data=> {
-				console.log(data);
-			})
+		if (this.state.inputValue) {
+			fetch(`/api/search/${this.state.inputValue}`)
+				.then(res=>res.json())
+				.then(data=> {
+					console.log(data);
+				})
+		}
 	}
 
 	render() {
