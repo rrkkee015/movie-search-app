@@ -21,9 +21,10 @@ db.on('error', function(err){
 });
 
 // app.use(cors());
+// Because of body parser, we can use => res.json({'example': example})
 app.use(bodyParser.json());
 app.use('/api', route);
 
 app.listen(port, () => {
-    console.log(`express is running on ${port}`);
+  console.log(`express is running on ${port}`);
 })

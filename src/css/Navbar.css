@@ -1,46 +1,46 @@
 .Navbar {
-    z-index: 2;
-    min-height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    position: sticky;
-    position: -webkit-sticky;
-    width: 100%;
-    top: 0;
+	z-index: 2;
+	min-height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	position: sticky;
+	position: -webkit-sticky;
+	width: 100%;
+	top: 0;
 }
 
 .Navbar
 .Hamburger > div {
-    width: 20px;
-    height: 2px;
-    background-color: white;
-    margin: 4px 0;
+	width: 20px;
+	height: 2px;
+	background-color: white;
+	margin: 4px 0;
 }
 
 .Navbar__black {
-    background-color: #344770 !important;
-    color: #C3CBD1;
-    -webkit-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;   
+	background-color: #344770 !important;
+	color: #C3CBD1;
+	-webkit-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;   
 }
 
 .Navbar__black
 .Hamburger > div {
-    background-color: #C3CBD1 !important;
-    -webkit-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;   
+	background-color: #C3CBD1 !important;
+	-webkit-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;   
 }
 
 .Navbar_title {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .Navbar__content {
-    padding: 8px 16px;
+	padding: 8px 16px;
 }
 
 .Navbar__button {
-    cursor: pointer;
+	cursor: pointer;
 }
