@@ -1,12 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => res.json({username:'GGO DONG'}));
+const Movie = require('../models/movie');
 
 router.get('/search/:movie', (req, res) => {
-    console.log(req.params.movie);
+    const movie = req.params.movie;
+    const regex = new RegExp(movie, 'i');
+    Movie.find({title: {$regex: movie}}, function(err, movie) {
+        if (err) return res.json(err);
+        res.json({movie: movie})
+    })
 })
-
-router.get('/group', (req, res)=>res.json({username: 'dev group. GGO DONG'}));
 
 module.exports = router;
