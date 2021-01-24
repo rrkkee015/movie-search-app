@@ -1,4 +1,4 @@
-.Navbar {
+.navbar {
 	z-index: 2;
 	min-height: 40px;
 	display: flex;
@@ -11,36 +11,36 @@
 	top: 0;
 }
 
-.Navbar
-.Hamburger > div {
+.navbar
+.hamburger > div {
 	width: 20px;
 	height: 2px;
 	background-color: white;
 	margin: 4px 0;
 }
 
-.Navbar__black {
+.navbar__black {
 	background-color: #344770 !important;
 	color: #C3CBD1;
 	-webkit-transition: all 500ms ease-in-out;
 	transition: all 500ms ease-in-out;   
 }
 
-.Navbar__black
-.Hamburger > div {
+.navbar__black
+.hamburger > div {
 	background-color: #C3CBD1 !important;
 	-webkit-transition: all 500ms ease-in-out;
 	transition: all 500ms ease-in-out;   
 }
 
-.Navbar_title {
+.navbar_title {
 	font-size: 18px;
 }
 
-.Navbar__content {
+.navbar__content {
 	padding: 8px 16px;
 }
 
-.Navbar__button {
+.navbar__button {
 	cursor: pointer;
 }

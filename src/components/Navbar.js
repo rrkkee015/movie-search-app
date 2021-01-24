@@ -28,17 +28,17 @@ class Navbar extends React.Component {
 
   render() {
     return (
-      <div className={`Navbar ${this.state.scrollTop && 'Navbar__black'}`}>
-        <div className="Navbar__content">
-          <div className="Navbar__button Hamburger">
+      <div className={`navbar ${this.state.scrollTop && 'navbar__black'}`}>
+        <div className="navbar__content">
+          <div className="navbar__button hamburger">
             <div></div>
             <div></div>
             <div></div>
           </div>
         </div>
-        <div className="Navbar_title">Moovie</div>
-        <div className="Navbar__content">
-          <div className="Navbar__button">
+        <div className="navbar_title">Moovie</div>
+        <div className="navbar__content">
+          <div className="navbar__button">
             <IoLogInOutline size="20" />
           </div>
         </div>

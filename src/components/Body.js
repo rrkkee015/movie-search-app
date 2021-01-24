@@ -28,15 +28,17 @@ class Body extends React.Component {
 
 	render() {
 		return (
-			<div className="Body">
-				<form onSubmit={this.handleSubmit}>
-					<input
-						type="text"
-						placeholder="What do you want?"
-						value={this.state.inputValue}
-						onChange={this.handleChange}
-						name="value"
-					/>
+			<div className="body">
+				<form className="main-form" onSubmit={this.handleSubmit}>
+					<div className="input-wrapper">
+						<input
+							type="text"
+							placeholder="What do you want?"
+							value={this.state.inputValue}
+							onChange={this.handleChange}
+							name="value"
+						/>
+					</div>
 					<button type="submit">Gotcha!</button>
 				</form>
 			</div>
