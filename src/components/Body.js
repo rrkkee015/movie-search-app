@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/Body.css'
 
+import { RiMovie2Line } from "react-icons/ri";
+
 class Body extends React.Component {
 	constructor(props) {
 		super(props);
@@ -31,6 +33,9 @@ class Body extends React.Component {
 			<div className="body">
 				<form className="main-form" onSubmit={this.handleSubmit}>
 					<div className="input-wrapper">
+						<div className="icon-wrapper">
+							<RiMovie2Line size="24"/>
+						</div>
 						<input
 							type="text"
 							placeholder="What do you want?"
@@ -39,7 +44,6 @@ class Body extends React.Component {
 							name="value"
 						/>
 					</div>
-					<button type="submit">Gotcha!</button>
 				</form>
 			</div>
 		)

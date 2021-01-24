@@ -16,6 +16,7 @@
 	position: relative;
 	height: 44px;
 	width: 337px;
+	color: #80868B;
 }
 
 @media (min-width: 672px) {
@@ -40,7 +41,6 @@
 	background-color: white;
 	border: none;
 	border-radius: calc(0.5 * 44px);
-	color: #80868B;
 	font-size: 16px;
 	height: 100%;
 	position: relative;
@@ -48,4 +48,15 @@
 	padding-inline-end: 40px;
 	outline: none;
 	width: 100%;
+}
+
+.icon-wrapper {
+	display: flex;
+	position: absolute;
+	z-index: 2;
+	height: 100%;
+	left: 12px;
+	justify-content: center;
+	align-items: center;
+	width: 32px;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Navbar.css'
+
 import { IoLogInOutline } from "react-icons/io5"
 
 class Navbar extends React.Component {
