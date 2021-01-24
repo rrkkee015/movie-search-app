@@ -49,7 +49,7 @@ class Body extends React.Component {
 							/>
 						</div>
 					</form>
-					<div className="movieContainer">
+					<div className="movie-container">
 						{
 							this.state.movieList.map((movie, index) => {
 								return <Movie key={index} movie={movie}></Movie>
