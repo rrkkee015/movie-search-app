@@ -1,5 +1,6 @@
 import React from 'react';
-import '../css/Body.css'
+import Movie from './Movie';
+import '../css/Body.css';
 
 import { RiMovie2Line } from "react-icons/ri";
 
@@ -8,6 +9,7 @@ class Body extends React.Component {
 		super(props);
 		this.state = {
 			inputValue: '',
+			movieList: []
 		}
 	}
 
@@ -23,7 +25,7 @@ class Body extends React.Component {
 			fetch(`/api/search/${this.state.inputValue}`)
 				.then(res=>res.json())
 				.then(data=> {
-					console.log(data);
+					this.setState({ movieList: data.movie });
 				})
 		}
 	}
@@ -31,20 +33,27 @@ class Body extends React.Component {
 	render() {
 		return (
 			<div className="body">
-				<form className="main-form" onSubmit={this.handleSubmit}>
-					<div className="input-wrapper">
-						<div className="icon-wrapper">
-							<RiMovie2Line size="24"/>
+				<div className="container">
+					<form className="main-form" onSubmit={this.handleSubmit}>
+						<div className="input-wrapper">
+							<div className="icon-wrapper">
+								<RiMovie2Line size="24"/>
+							</div>
+							<input
+								type="text"
+								placeholder="What do you want?"
+								value={this.state.inputValue}
+								onChange={this.handleChange}
+								name="value"
+							/>
 						</div>
-						<input
-							type="text"
-							placeholder="What do you want?"
-							value={this.state.inputValue}
-							onChange={this.handleChange}
-							name="value"
-						/>
-					</div>
-				</form>
+					</form>
+					{
+						this.state.movieList.map((movie, index) => {
+							return <Movie key={index} movie={movie}></Movie>
+						})
+					}
+				</div>
 			</div>
 		)
 	}

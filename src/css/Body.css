@@ -11,9 +11,14 @@
 	width: 100%;
 }
 
+.container {
+	position: absolute;
+	max-height: 449px;
+}
+
 .main-form {
-	margin: 0 auto;
 	position: relative;
+	margin: 0 auto;
 	height: 44px;
 	width: 337px;
 	color: #80868B;
