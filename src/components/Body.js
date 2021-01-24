@@ -45,14 +45,17 @@ class Body extends React.Component {
 								value={this.state.inputValue}
 								onChange={this.handleChange}
 								name="value"
+								autoComplete="off"
 							/>
 						</div>
 					</form>
-					{
-						this.state.movieList.map((movie, index) => {
-							return <Movie key={index} movie={movie}></Movie>
-						})
-					}
+					<div className="movieContainer">
+						{
+							this.state.movieList.map((movie, index) => {
+								return <Movie key={index} movie={movie}></Movie>
+							})
+						}
+					</div>
 				</div>
 			</div>
 		)

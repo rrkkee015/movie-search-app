@@ -16,23 +16,36 @@
 	max-height: 449px;
 }
 
+.movieContainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0px 2rem;
+}
+
 .main-form {
 	position: relative;
 	margin: 0 auto;
 	height: 44px;
 	width: 337px;
 	color: #80868B;
+	margin-bottom: 32px;
 }
 
 @media (min-width: 672px) {
 	.main-form {
 		width: 561px;
 	}
+	.movieContainer {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 @media (min-width: 560px) and (max-width: 671px) {
 	.main-form {
 		width: 449px;
+	}
+	.movieContainer {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
